@@ -1,0 +1,15 @@
+<md-input-container style="margin-right: 10px;">
+    <label>Size</label>
+    <md-select ng-model="size">
+        <md-optgroup label="No Surcharge">
+            <md-option ng-repeat="size in sizes | filter: {surcharge: 'none'}"
+                       value="{{size.name}}">{{size.name}}
+            </md-option>
+        </md-optgroup>
+        <md-optgroup label="Additional Surcharge">
+            <md-option ng-repeat="size in sizes | filter: {surcharge: 'extra'}"
+                       value="{{size.name}}">{{size.name}}
+            </md-option>
+        </md-optgroup>
+    </md-select>
+</md-input-container>
