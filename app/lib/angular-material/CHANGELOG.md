@@ -4398,7 +4398,7 @@ This RC2 release contains more polish and bug fixes to stabilize performance, la
 * **select:**
   * fix scrollbars not respecting parent overflow hidden ([b9ee6121](https://github.com/angular/material/commit/b9ee6121412d59895b43286f4eefd4418e9081aa))
   * fix select backdrop closing when parent is destroyed ([2d66368c](https://github.com/angular/material/commit/2d66368cc31daf476bf786083a256d47a0e338ce))
-  * fix infinite loop condition ([6e3b43cc](https://github.com/angular/material/commit/6e3b43cc91df2fa84a8c3983763e432b906a5740))
+  * fix infinite loop mdsConditionBuilderCondition ([6e3b43cc](https://github.com/angular/material/commit/6e3b43cc91df2fa84a8c3983763e432b906a5740))
   * fix 1px error to match md-input-container style ([bd566a52](https://github.com/angular/material/commit/bd566a5217fedfb0731098795c6f45563c68716c))
   * add tabindex, aria-disabled support ([40924003](https://github.com/angular/material/commit/409240037aee989926179e4e5d3137dd9704b008), closes [#2308](https://github.com/angular/material/issues/2308))
   * fix restore focus on select close ([f55eeba0](https://github.com/angular/material/commit/f55eeba04150d0aecd2afe03c88009cf62293b9e))

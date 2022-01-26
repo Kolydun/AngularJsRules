@@ -1,0 +1,38 @@
+<div style="border: 2px solid black">
+
+    <div>
+        <md-button ng-click="$ctrl.addCondition()">Add Condition</md-button>
+        <md-button ng-click="$ctrl.addExpression()">Add Expression</md-button>
+        <md-button ng-click="$ctrl.addGroup()">Add Group</md-button>
+        <md-button ng-click="$ctrl.deleteGroup()"
+                   ng-if="$ctrl.isDeleteToShow === 'true'">Delete Group</md-button>
+
+    </div>
+    <div ng-repeat="rule in $ctrl.group.rules">
+
+        <mds-condition-builder-expression
+                ng-if="rule.type === 'expression'"
+        delete-expression="$ctrl.deleteRule($index)"
+                print-expression="$ctrl.printCondition($index)"
+                rule="rule">
+        </mds-condition-builder-expression>
+
+        <mds-condition-builder-condition
+                ng-if="rule.type === 'condition'"
+                variables="$ctrl.variables"
+                operators="$ctrl.operators"
+                delete-condition="$ctrl.deleteRule($index)"
+                print-condition="$ctrl.printCondition($index)"
+                rule="rule">
+        </mds-condition-builder-condition>
+
+        <mds-condition-builder-rules-group
+                ng-if="rule.type === 'group'"
+                operators="$ctrl.operators"
+                variables="$ctrl.variables"
+                delete-group="$ctrl.deleteRule($index)"
+                rule="rule"
+                is-delete-to-show="true">
+        </mds-condition-builder-rules-group>
+    </div>
+</div>

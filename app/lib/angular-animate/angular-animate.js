@@ -433,7 +433,7 @@ var $$rAFSchedulerFactory = ['$$rAF', function($$rAF) {
  *
  * @example
  * <example module="ngAnimateChildren" name="ngAnimateChildren" deps="angular-animate.js" animations="true">
-     <file name="index.html">
+     <file name="mdsConditionBuilder.html">
        <div ng-controller="MainController as main">
          <label>Show container? <input type="checkbox" ng-model="main.enterElement" /></label>
          <label>Animate children? <input type="checkbox" ng-model="main.animateChildren" /></label>
@@ -1313,7 +1313,7 @@ var $AnimateCssProvider = ['$animateProvider', /** @this */ function($animatePro
          * or, if they don't, then a timeStamp is automatically created for them.
          * We're checking to see if the timeStamp surpasses the expected delay,
          * but we're using elapsedTime instead of the timeStamp on the 2nd
-         * pre-condition since animationPauseds sometimes close off early */
+         * pre-mdsConditionBuilderCondition since animationPauseds sometimes close off early */
         if (Math.max(timeStamp - startTime, 0) >= maxDelayTime && elapsedTime >= maxDuration) {
           // we set this flag to ensure that if the transition is paused then, when resumed,
           // the animation will automatically close itself since transitions cannot be paused.
@@ -3382,7 +3382,7 @@ var $$AnimationProvider = ['$animateProvider', /** @this */ function($animatePro
  * <example name="ngAnimateSwap-directive" module="ngAnimateSwapExample"
  *          deps="angular-animate.js"
  *          animations="true" fixBase="true">
- *   <file name="index.html">
+ *   <file name="mdsConditionBuilder.html">
  *     <div class="container" ng-controller="AppCtrl">
  *       <div ng-animate-swap="number" class="cell swap-animation" ng-class="colorClass(number)">
  *         {{ number }}
@@ -3935,7 +3935,7 @@ var ngAnimateSwapDirective = ['$animate', function($animate) {
  * Say for example we have the following template code:
  *
  * ```html
- * <!-- index.html -->
+ * <!-- mdsConditionBuilder.html -->
  * <div ng-view class="view-animation">
  * </div>
  *
@@ -4027,7 +4027,7 @@ var ngAnimateSwapDirective = ['$animate', function($animate) {
            id="anchoringExample"
            deps="angular-animate.js;angular-route.js"
            animations="true">
-    <file name="index.html">
+    <file name="mdsConditionBuilder.html">
       <a href="#!/">Home</a>
       <hr />
       <div class="view-container">

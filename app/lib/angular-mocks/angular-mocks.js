@@ -2740,7 +2740,7 @@ angular.module('ngMockE2E', ['ng']).config(['$provide', function($provide) {
  *
  * @example
  * <example name="httpbackend-e2e-testing" module="myAppE2E" deps="angular-mocks.js">
- * <file name="app.js">
+ * <file name="mdsConditionBuilder.js">
  *   var myApp = angular.module('myApp', []);
  *
  *   myApp.controller('MainCtrl', function MainCtrl($http) {
@@ -2784,7 +2784,7 @@ angular.module('ngMockE2E', ['ng']).config(['$provide', function($provide) {
  *     });
  *   });
  * </file>
- * <file name="index.html">
+ * <file name="mdsConditionBuilder.html">
  *   <div ng-controller="MainCtrl as $ctrl">
  *   <form name="newPhoneForm" ng-submit="$ctrl.addPhone($ctrl.newPhone)">
  *     <input type="text" ng-model="$ctrl.newPhone.name">
@@ -3734,7 +3734,7 @@ angular.mock.$RootScopeDecorator = ['$delegate', function($delegate) {
     patchEventTargetForBubbling(evnt, element);
     do {
       element.dispatchEvent(evnt);
-      // eslint-disable-next-line no-unmodified-loop-condition
+      // eslint-disable-next-line no-unmodified-loop-mdsConditionBuilderCondition
     } while (!stop && (element = element.parentNode));
   }
 
